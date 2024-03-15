@@ -6,7 +6,7 @@ if 'input_features' not in st.session_state:
     st.session_state['input_features'] = {}
 
 def app_sidebar():
-    st.sidebar.header('Loan Details')
+    st.sidebar.header('Borrower' profile')
     emp_length_options = ['< 1 year','1 year','2 years','3 years','4 years','5 years',
                           '6 years','7 years','8 years','9 years','10+ years']
     emp_length = st.sidebar.selectbox("Employment Length", emp_length_options)
@@ -34,7 +34,7 @@ def app_sidebar():
     return None
 
 def app_body():
-    title = '<p style="font-family:arial, sans-serif; color:Black; font-size: 40px;"><b> Welcome to DSSI Loan Assessment</b></p>'
+    title = '<p style="font-family:arial, sans-serif; color:Black; font-size: 40px;"><b> Eyeway's bank Loan Assessment</b></p>'
     st.markdown(title, unsafe_allow_html=True)
     default_msg = '**System assessment says:** {}'
     if st.session_state['input_features']:
